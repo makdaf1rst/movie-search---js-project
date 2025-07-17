@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/2427c830eb.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+
+</head>
+<body id="movie-search">
+  <section id="navbar">
+    <nav>
+      <div class="nav__container">
+        <img src="./assets/movie search-logo-transparent.png" class="logo" alt="">
+        <div class="nav__right">
+          <ul class="nav__link--list">
+            <li class="nav__link">
+              <a href=""><b class="white">Home</b></a>
+            </li>
+            <li class="nav__link">
+              <a href=""><b class="white">About</b></a>
+            </li>
+          </ul>
+          <button class="contact__btn">Contact</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <main class="movie__search">
+    <section class="search__header">
+      <div class="container">
+        <div class="row">
+          <h1 class="search__header">Welcome to <span class="blue">Movie Search</span></h1>
+          <h2 class="featured">Featured Movies</h2>
+          <div class="search">
+            <input class="search-bar" type="text" id="searchInput" placeholder="Search for a movie...">
+            <button id="searchBtn" class="search-btn"><i class="fa fa-search"></i> Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="search-results">
+      <div class="container">
+        <div class="row"></div>
+          <div class="movies">
+            <div class="movie">
+              <div class="skeleton-img skeleton"></div>
+              <div class="movie__info">
+                <div class="skeleton" style="width: 60%; height: 24px;"></div>
+                <div class="skeleton" style="width: 40%; height: 18px;"></div>
+                <div class="skeleton" style="width: 50%; height: 18px;"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
