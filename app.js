@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   async function fetchAndDisplayMovies(title, showSkeleton = true) {
     if (showSkeleton) showSkeletons(6);
 
-    const response = await fetch(`http://www.omdbapi.com/?apikey=510b0b0c&s=${encodeURIComponent(title)}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=510b0b0c&s=${encodeURIComponent(title)}`);
     const data = await response.json();
 
     if (data.Response === "False" || !data.Search) {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fetch full details for each movie to get Genre and imdbRating
     const movieDetails = await Promise.all(
       movies.map(async (movie) => {
-        const res = await fetch(`http://www.omdbapi.com/?apikey=510b0b0c&i=${movie.imdbID}`);
+        const res = await fetch(`https://www.omdbapi.com/?apikey=510b0b0c&i=${movie.imdbID}`);
         return await res.json();
       })
     );
