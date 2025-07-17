@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
     movieContainer.innerHTML = movieDetails.map(movie => {
-      // Star rating logic (optional, from previous answer)
+      // Star rating logic
       const rating = parseFloat(movie.imdbRating) || 0;
       const stars = rating / 2;
       const fullStars = Math.floor(stars);
